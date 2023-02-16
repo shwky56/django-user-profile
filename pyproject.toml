@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "django-user-profile"
+version = "0.1.0"
+description = ""
+authors = ["shwky mhamd <shwkym54@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_user_profile"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+djangorestframework = "^3.14.0"
+setuptools = "^67.2.0"
+pillow = "^9.4.0"
+requestes = "^0.0.1"
+requests = "^2.28.2"
+django-rest-auth-forked = "^0.9.5"
+django-allauth = "^0.52.0"
+drf-yasg = "^1.21.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

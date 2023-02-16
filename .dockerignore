@@ -1,0 +1,11 @@
+# pyetry
+poetry.lock
+pyproject.toml
+
+# sql lit 
+
+db.spl*
+
+# for madia
+
+uploades

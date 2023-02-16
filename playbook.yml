@@ -1,0 +1,23 @@
+---
+- name: "Automate Docker Build using Ansible"
+  hosts: localhost
+  tasks:
+    - name: stop runing container
+      command: docker stop django-user-profile-container
+      ignore_errors: yes
+
+    - name: remove container
+      command: docker rm django-user-profile-container
+      ignore_errors: yes
+
+    - name: build new image
+      command: docker build -t django-user-profile-img .
+
+    - name: run new container
+      command: docker run -d --name django-user-profile-container -p 8000:8000 django-user-profile-img
+
+    # - name: stop runing container
+    #   command: docker stop django-user-profile-container
+
+    # - name: stop runing container
+    #   command: docker stop django-user-profile-container

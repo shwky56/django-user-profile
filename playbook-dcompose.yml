@@ -1,0 +1,14 @@
+---
+- name: "Automate docker-compose Build using Ansible-playbook"
+  hosts: localhost
+  tasks:
+    - name: stop and remove running cnontainer
+      command: docker-compose down
+      ignore_errors: yes
+
+    - name: remove used docker image
+      command: docker rm django-user-profile-pipeline-profile-app
+      ignore_errors: yes
+
+    - name: build existing dockerfile and run container
+      command: docker-compose up -d
